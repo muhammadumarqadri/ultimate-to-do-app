@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Tasks</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search tasks..." aria-label="Search Tasks" />
+      <button id="toggle-theme" aria-label="Toggle Dark/Light Mode">🌓</button>
+    </div>
+  </header>
+ 
+  <main>
+    <section class="task-input">
+      <input type="text" id="task-title" placeholder="Task title" />
+      <input type="datetime-local" id="due-date" />
+      <select id="priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <input type="text" id="tag" placeholder="#tag or category" />
+      <button id="add-task">Add Task</button>
+    </section>
+ 
+    <section class="filters">
+      <label>
+        <input type="checkbox" id="show-completed" />
+        Show Completed
+      </label>
+      <select id="sort-by">
+        <option value="created">Sort by Created</option>
+        <option value="due">Sort by Due Date</option>
+        <option value="priority">Sort by Priority</option>
+      </select>
+    </section>
+ 
+    <ul id="task-list" aria-live="polite"></ul>
+  </main>
+ 
+  <footer>
+    <div id="clock" aria-label="Current Time"></div>
+  </footer>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
